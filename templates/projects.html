@@ -1,0 +1,173 @@
+{% extends "index.html" %}
+
+<!-- Set custom tab title-->
+{% block title%} {{ tab_title }} {% endblock %}
+
+<!-- Insert page content-->
+{% block content %}
+
+<div class="subpage-content">
+
+    <h1>Project Gallery</h1>
+    <p>Here is a selection of some of the recent projects I am working on</p>
+
+
+    <!-- <div class="subnav">
+        <a class="subnav-link" href="#ML-projects">Machine Learning</a>
+        <a class="subnav-link" href="#fun-projects">For fun</a>
+    </div> -->
+
+    <div class="select-content">
+        <select name="choose-which-shows" id="choose-which-shows" class="input-select">
+            <option value="ML">Machine Learning</option>
+            <option value="AI">Artificial Intelligence</option>
+            <option value="fun">For fun</option>
+        </select>
+    </div>
+
+
+    <section class="jqueryOptions ML project-cards" id="first">
+        <div class="project-type-description">
+            <h1>Machine Learning projects</h1>
+            <p>Here are some highlighted projects that use various machine learning techniques to answer analysis questions</p>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-details-left">
+                <h1>Naive-Bayes Classification with sklearn</h1>
+                <p>This project highlights the use of the sklearn library for classification using the Naive-Bayes algorithm. We include a comprehensive mathematical background page for a refresher on the underpinnings of this simple, yet powerful classification technique. We then provide complete walkthroughs of classification with two datasets: the Iris dataset, comprised of numerical data on samples of the Iris flower, and the 20 Newsgroups dataset, which is composed of entirely textual samples taken from internet postings on twenty different categories.
+                </p>
+                <a href="{{ url_for('project_page', id_name='naive_bayes_sklearn') }}">Read more</a>
+            </div>
+            <div class="project-img-right">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-img-left">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+            <div class="project-details-right">
+                <h1>Project B</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-B') }}">Read more</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-details-left">
+                <h1>Project C</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-C') }}">Read more</a>
+            </div>
+            <div class="project-img-right">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="jqueryOptions AI project-cards">
+        <div class="project-type-description">
+            <h1>Artificial Intelligence projects</h1>
+            <p>Here are some highlighted projects that use various artificial intelligence techniques to answer analysis questions</p>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-details-left">
+                <h1>Project Alpha</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-Alpha') }}">Read more</a>
+            </div>
+            <div class="project-img-right">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-img-left">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+            <div class="project-details-right">
+                <h1>Project Beta</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-Beta') }}">Read more</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-details-left">
+                <h1>Project Gamma</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-Gamma') }}">Read more</a>
+            </div>
+            <div class="project-img-right">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+        </div>
+    </section>
+
+    <section class="jqueryOptions fun project-cards">
+        <div class="project-type-description">
+            <h1>Projects just for fun</h1>
+            <p>These projects are more coding based and not necesarrily data-science oriented, but I had fun creating them! Enjoy.</p>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-details-left">
+                <h1>Project 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-1') }}">Read more</a>
+            </div>
+            <div class="project-img-right">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-img-left">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+            <div class="project-details-right">
+                <h1>Project 2</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-2') }}">Read more</a>
+            </div>
+        </div>
+
+        <div class="project-card" id="bkg-accent-light">
+            <div class="project-details-left">
+                <h1>Project 3</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aspernatur quam eos? Est officia, explicabo, quia voluptatum omnis aperiam totam fugiat nobis et dicta autem iure voluptate minus impedit voluptatibus.
+                </p>
+                <a href="{{ url_for('project_page', id_name='Project-3') }}">Read more</a>
+            </div>
+            <div class="project-img-right">
+                <img src="../static/images/Placeholder-Image-Square.png" alt="placeholder">
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

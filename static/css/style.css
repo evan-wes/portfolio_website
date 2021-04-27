@@ -1,0 +1,272 @@
+/* Color theme variables */
+
+    :root {
+        /* A dark grey/light blue theme with orange highlights */
+        --dark-theme: #3c424f;
+        --light-theme: azure;
+        --light-blue-theme: lightblue;
+        --blue-theme: dodgerblue;
+        --highlight-theme: #ffa812;
+        --ultra-light-theme: white;
+
+        --dark-plum: #3c424f;
+
+        --header-height: 72px;
+    }
+
+
+/* Universal Styles */
+
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--dark-theme);
+        background-color: var(--ultra-light-theme);
+    }
+
+    body {
+        color: var(--dark-plum);
+        background-color: var(--ultra-light-theme);
+        margin: 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #bkg-accent-dark {
+        color: var(--light-theme);
+        background-color: var(--dark-theme);
+    }
+
+    #bkg-accent-light {
+        color: var(--dark-theme);
+        background-color: var(--light-theme);
+    }
+
+
+/* Base header styles */
+    .base-header {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-height);
+        color: var(--light-blue-theme);
+        background-color: var(--dark-theme);
+        box-shadow: 0 0 5px 2px rgb(0 0 0 / 33%);
+    }
+
+
+/* Navigation bar styles */
+
+    /* topnav: navigation bar in the top sticky header */
+    .topnav {
+        width: 100%;
+        height: 100%;
+        margin: auto 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    .topnav-left {
+        --spacing: 32px;
+        padding-left: var(--spacing);
+        padding-right: var(--spacing);
+        height: 100%;
+        display: flex;
+        font-size: 32px;
+        align-items: center;
+    }
+
+    .topnav-right {
+        height: 100%;
+        display: flex;
+        font-size: 24px;
+        align-items: center;
+    }
+
+    .topnav a {
+        --spacing: 32px;
+        padding-left: var(--spacing);
+        padding-right: var(--spacing);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topnav a:not(.current):hover {
+        color: var(--dark-theme);
+        background-color: var(--light-theme);
+        opacity: 0.5;
+    }
+
+    .topnav a.current {
+        color: var(--blue-theme);
+    }
+
+    #evan-span {
+        color: var(--light-blue-theme);
+        font-weight: bold;
+    }
+
+    #wesley-span {
+        color: var(--light-theme);
+        font-style: italic;
+        font-weight: 100;
+    }
+
+
+    /* subnav: a navigation bar inside a page content */
+    .subnav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subnav a {
+        --spacing: 32px;
+        --inner-padding: 10px;
+        margin-left: var(--spacing);
+        margin-right: var(--spacing);
+        padding: var(--inner-padding);
+        text-transform: uppercase;
+        border: solid var(--dark-theme) 2px;
+    }
+
+    .subnav a:hover {
+        color: var(--highlight-theme);
+        background-color: var(--dark-theme);
+    }
+
+    /* select-content: a row of buttons which toggle what content is visible */
+    div.select-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 32px 0;
+    }
+
+    div.selectbtn {
+        --spacing: 24px;
+        --inner-padding: 10px;
+        margin-left: var(--spacing);
+        margin-right: var(--spacing);
+        padding: var(--inner-padding);
+        text-transform: uppercase;
+        border: solid var(--dark-theme) 2px;
+        display : inline-block;
+        
+        cursor: pointer;
+    }
+
+    div.selectbtn:hover {
+        color: var(--light-blue-theme);
+        background-color: var(--dark-theme);
+    }
+
+    div.selectbtn.selected {
+        color: var(--light-blue-theme);
+        background-color: var(--dark-theme);
+    } 
+
+/* Main styles */
+
+    /* main: div inside base.html that contains outer block content */
+    .main {
+        width: 100%;
+        position: relative;
+        top: calc(3*var(--header-height)); 
+        color: var(--dark-theme);
+        background-color: var(--ultra-light-theme);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* subpage-content: div that surrounds all content inside each template's outer block-content */
+    .subpage-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+/* Site specific styles */
+    
+    /* Project page styles */
+    .project-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 32px auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s;
+    }
+
+    /* transition box shadow to make it slightly darker on mouse hover */
+    .project-card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card a {
+        color: var(--blue-theme);
+    }
+
+    .project-card img {
+        padding: 32px;
+    }
+
+    .project-type-description {
+        text-align: center;
+    }
+
+    .project-details-left {
+        width: 55%;
+        margin-left: 3%;
+        margin-right: 7%;
+    }
+
+    .project-details-right {
+        width: 55%;
+        margin-left: 7%;
+        margin-right: 3%;
+    }
+
+    .project-img-left {
+        width: 35%;
+        background-color: var(--light-blue-theme);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-img-right {
+        width: 35%;
+        background-color: var(--light-blue-theme);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Individual project page styles */
+    a.project-heroku-link {
+        color: var(--blue-theme);
+    }
+
+    a#project-heroku-link {
+        color: var(--blue-theme);
+    }

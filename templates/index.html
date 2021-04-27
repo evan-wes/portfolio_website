@@ -1,0 +1,63 @@
+<!-- This file comprises the base HTML code for the website. 
+    It includes a header section, code to insert template 
+    subfiles, and a footer section. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>
+        {% set title -%}
+            {% block title %}{% endblock %}
+        {%- endset %}
+        {{ title.lower() }} : evan wesley
+    </title>
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../static/js/scripts.js"></script>
+
+</head>
+<body> 
+    
+    <!-- Header section -->
+    <div class="base-header" id="desktop">
+
+        <div class="topnav">
+            <div class="topnav-left">
+                <span id="evan-span">Evan </span> <span id="wesley-span">Wesley</span>
+            </div>
+
+            <div class="topnav-right">
+                <a class="topnav-link" href="{{ url_for('background') }}">Background</a>
+                <a class="topnav-link" href="{{ url_for('projects') }}">Projects</a>
+                <a class="topnav-link" href="{{ url_for('contact') }}">Contact</a>
+                <a class="topnav-link" href="{{ url_for('home') }}">Home</a> 
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Insert html templates here-->
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    
+
+    <!-- Footer section-->
+    <div class="base-footer" id="desktop">
+
+        <div class="botnav">
+
+        </div>
+
+    </div>
+
+</body>
+</html>

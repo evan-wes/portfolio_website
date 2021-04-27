@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+<!-- Set custom tab title-->
+{% block title%} {{ project.name }} {% endblock %}
+
+<!-- Insert page content-->
+{% block content %}
+
+<div class="subpage-content project-page">
+
+    <p>Below for testing variable data passing: </p>
+    <h1>h1 tag from jinja template 'project_page.html'</h1>
+    
+    
+
+    <br>
+    <p>Include custom project page: '{{ project.html_filename }}': </p>
+
+    {% include 'project_pages/%s' % project.html_filename  %}
+
+    <p>{{ project.heroku_link }}</p>
+
+    <a href={{ project.heroku_link }} class="project-heroku-link">Run on Heroku</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
