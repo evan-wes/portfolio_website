@@ -16,21 +16,23 @@ db = SQLAlchemy(app)
 
 import routes
 
-from models import Project
+if environ.get('DATABASE_URL') is None:
 
-# Create database and add projects
-db.drop_all()
-db.create_all()
+    from models import Project
 
-# Create Project instances
-naive_bayes_sklearn_project = Project(id_name='naive_bayes_sklearn',
-                                        name='Naive-Bayes Classifcation with sklearn',
-                                        tags='sklearn classification supervised-ML Naive-Bayes',
-                                        html_filename='naive_bayes_sklearn.html',
-                                        heroku_link='https://naive-bayes-sklearn.herokuapp.com/')
+    # Create database and add projects
+    db.drop_all()
+    db.create_all()
 
-# Add Project instances to database
-db.session.add(naive_bayes_sklearn_project)
+    # Create Project instances
+    naive_bayes_sklearn_project = Project(id_name='naive_bayes_sklearn',
+                                            name='Naive-Bayes Classifcation with sklearn',
+                                            tags='sklearn classification supervised-ML Naive-Bayes',
+                                            html_filename='naive_bayes_sklearn.html',
+                                            heroku_link='https://naive-bayes-sklearn.herokuapp.com/')
 
-# Commit changes to database
-db.session.commit()
+    # Add Project instances to database
+    db.session.add(naive_bayes_sklearn_project)
+
+    # Commit changes to database
+    db.session.commit()
