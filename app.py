@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL') or 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL').replace('postgres', 'postgresql') or 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'you-will-never-guess'
 
