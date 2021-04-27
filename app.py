@@ -14,7 +14,6 @@ db = SQLAlchemy(app)
 
 import routes
 
-
 from models import Project
 
 # Create database and add projects
