@@ -14,6 +14,7 @@ db = SQLAlchemy(app)
 
 import routes
 
+'''
 from models import Project
 
 # Create database and add projects
@@ -31,3 +32,4 @@ db.session.add(naive_bayes_sklearn_project)
 
 # Commit changes to database
 db.session.commit()
+'''
