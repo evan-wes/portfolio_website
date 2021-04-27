@@ -18,9 +18,17 @@
 
     {% include 'project_pages/%s' % project.html_filename  %}
 
-    <p>{{ project.heroku_link }}</p>
+    <h2>Project tags:</h2>
+    <ul>
+        <!-- For loop logic with jinja template -->
+        {% for tag in project.tags.split() %}         
+            <li>{{ tag }}</li>
+        {%endfor%}          
+    </ul>
+
 
     <a href={{ project.heroku_link }} class="project-heroku-link">Run on Heroku</a>
+
 
 
 
