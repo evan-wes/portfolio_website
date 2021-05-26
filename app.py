@@ -30,6 +30,8 @@ if environ.get('DATABASE_URL') is None:
                                             tags='sklearn classification supervised-ML Naive-Bayes',
                                             html_filename='naive_bayes_sklearn.html',
                                             heroku_link='https://naive-bayes-sklearn.herokuapp.com/')
+    
+    okcupid_portfolio_analysis_prject = Project()
 
     # Add Project instances to database
     db.session.add(naive_bayes_sklearn_project)
