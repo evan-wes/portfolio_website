@@ -13,7 +13,7 @@ naive_bayes_sklearn_project = Project(id_name='naive_bayes_sklearn',
                                         github_repo = 'https://github.com/evan-wes/naive_bayes_sklearn',
                                         heroku_link='https://naive-bayes-sklearn.herokuapp.com/')
 
-okcupid_profile_analysis_project = Project(id_name='naive_bayes_sklearn',
+okcupid_profile_analysis_project = Project(id_name='okcupid_profile_analysis',
                                             name='OKCupid Profile Analysis',
                                             tags='sklearn classification supervised-ML logistic-regression KNN decision-tree',
                                             html_filename='okcupid_profile_analysis.html',
